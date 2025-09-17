@@ -1,0 +1,23 @@
+{
+  "name": "logger-datadog-lambda",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest --config jest.config.js",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1692.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.28.0",
+    "@babel/preset-typescript": "^7.27.1",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^18.11.9",
+    "jest": "^30.0.5",
+    "ts-jest": "^29.4.0",
+    "typescript": "^4.9.4"
+  }
+}
