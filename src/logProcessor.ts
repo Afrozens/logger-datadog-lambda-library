@@ -27,14 +27,10 @@ export class LogProcessor {
     try {
       const parsedLog = typeof log === 'string' ? JSON.parse(log) : log;
 
-      if (!parsedLog.request || !parsedLog.response || !parsedLog.resources) {
-        throw new Error('Log entry missing required fields: request, response or resources');
-      }
-
-      const requiredFields = ['timestamp', 'log_level', 'service', 'environment', 'aws'];
+      const requiredFields = ['timestamp', 'service'];
       const missingFields = requiredFields.filter(field => !parsedLog[field]);
 
-      if (missingFields.length > 5) {
+      if (missingFields.length > 2) {
         throw new Error(`Missing required fields: ${missingFields.join(', ')}`);
       }
 
